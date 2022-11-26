@@ -16,12 +16,10 @@ export const onLogin = async (email, password) => {
 
 export const onRegister = async (firstName, lastName, email, password) => {
   try {
-    const registerResponse = await axios.post(
+    await axios.post(
       `//${getBaseUrl()}${paths.auth.main}${paths.auth.register}`,
       { firstName, lastName, email, password, role: "Usuario", status: true }
-    );
-
-    localStorage.setItem("session", JSON.stringify(registerResponse.data));
+    ); 
   } catch (error) {
     throw new Error(error.response.data.message);
   }
