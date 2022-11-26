@@ -39,8 +39,8 @@ export default ({ isLoged }) => {
                 </Link>
               </li>,
               <li key="logout-nav" className="nav-item">
-                <Button color = "red" onClick={onLogOut}>
-                  Agregar Producto
+                <Button onClick={onLogOut}>
+                  Cerrar Sesión
                 </Button>
               </li>,
             ]}
