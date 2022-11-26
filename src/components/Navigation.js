@@ -29,7 +29,7 @@ export default ({ isLoged }) => {
           <ul className="navbar-nav">
             {isLoged && [
               <li key="promos-nav" className="nav-item">
-                <Link className="nav-link active" to="/listadopromos">
+                <Link className="nav-link active" to="/">
                   Promociones
                 </Link>
               </li>,
@@ -51,7 +51,7 @@ export default ({ isLoged }) => {
                 </Link>
               </li>,
               <li key="login-nav" className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link" to="/">
                   Login
                 </Link>
               </li>,

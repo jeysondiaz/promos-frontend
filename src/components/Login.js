@@ -15,7 +15,7 @@ export default () => {
 
       await onLogin(email, password);
 
-      navigate("/listadopromos");
+      navigate("/");
       window.location.reload();
     } catch (error) {
       setError(error.message);

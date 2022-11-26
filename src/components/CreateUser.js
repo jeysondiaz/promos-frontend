@@ -18,7 +18,7 @@ export default () => {
 
       await onRegister(firstName, lastName, email, password);
 
-      navigate("/login");
+      navigate("/");
       window.location.reload();
     } catch (error) {
       setError(error.message);
