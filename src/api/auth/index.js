@@ -18,7 +18,7 @@ export const onRegister = async (firstName, lastName, email, password) => {
   try {
     const registerResponse = await axios.post(
       `//${getBaseUrl()}${paths.auth.main}${paths.auth.register}`,
-      { firstName, lastName, email, password, role: "Usuario", status: true }
+      { firstName, lastName, email, password, role: "Administrador", status: true }
     );
 
     localStorage.setItem("session", JSON.stringify(registerResponse.data));
