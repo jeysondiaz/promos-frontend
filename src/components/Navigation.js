@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
 
 export default ({ isLoged }) => {
+  const onLogOut = () => {
+    localStorage.removeItem("session");
+    window.location.reload();
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -32,6 +37,11 @@ export default ({ isLoged }) => {
                 <Link className="nav-link" to="/addproduct">
                   Agregar Producto
                 </Link>
+              </li>,
+              <li key="logout-nav" className="nav-item">
+                <Button color = "red" onClick={onLogOut}>
+                  Agregar Producto
+                </Button>
               </li>,
             ]}
             {!isLoged && [
